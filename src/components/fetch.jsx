@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const fetch = (props) => {
-
+	const [data, setData] = useState()
 	useEffect(() => {
 		async function getData() {
-		let data = await fetch('https://jsonplaceholder.typicode/posts/1')
+		let response = await fetch('https://jsonplaceholder.typicode/posts/1')
+		let jsonData = response.jsonData()
 		console.log(data)
 	}
 	getData()
