@@ -1,5 +1,5 @@
 import React from "react";
-import {SinglePuppy} from "./";
+import { SinglePuppy } from "./";
 
 const AllPuppies = (props) => {
   const myPuppies = props.puppyData;
@@ -9,7 +9,11 @@ const AllPuppies = (props) => {
       {`This is your AllPuppies component`}
       {myPuppies.length ? (
         myPuppies.map((puppy) => {
-          return <SinglePuppy />;
+          return (
+            <div key={puppy.id}>
+              <SinglePuppy puppy={puppy} />;
+            </div>
+          );
           // <div key={`player-${puppy.id}`} className='puppy'>
           {
             /* <div>{puppy.name}</div>

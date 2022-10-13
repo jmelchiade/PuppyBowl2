@@ -1,5 +1,5 @@
 import React from "react";
 
-const SinglePuppy = () => {};
+const SinglePuppy = (props) => {};
 
 export default SinglePuppy;
