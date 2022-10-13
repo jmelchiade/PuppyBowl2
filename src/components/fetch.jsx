@@ -14,4 +14,5 @@ const fetch = (props) => {
 		<div className='box'>('This is your fetch component')
 		</div> )
 		}
+		
 export default fetch;
