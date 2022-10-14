@@ -20,6 +20,8 @@ body {
 } */
 
 #Navbar {
+  display: flex;
+  justify-content: space-around;
   font-family: "Poller One", Arial, sans-serif;
   flex-grow: 1;
   max-height: 10%;

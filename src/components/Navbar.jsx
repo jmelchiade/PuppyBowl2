@@ -3,8 +3,8 @@ import React from "react";
 const Navbar = (props) => {
   return (
     <div id="Navbar">
-      <h2>insert search bar here?</h2>
-      <form
+      <div><h2>Cute Puppy Roster</h2></div>
+      <div><form
         onSubmit={(e) => {
           e.preventDefault();
           props.setSearchTerm(e.target[0].value);
@@ -15,7 +15,7 @@ const Navbar = (props) => {
           <input type="text" name="name" />
         </label>
         <button type="submit">Submit</button>
-      </form>
+      </form></div>
     </div>
   );
 };
