@@ -9,14 +9,8 @@ const AllPuppies = (props) => {
       {myPuppies.length ? (
         myPuppies.map((puppy) => {
           return (
-            <div key={`player-${puppy.id}`} className="puppy">
-              <SinglePuppy puppy={puppy} />
-              <div id="pupId">{"#"+ puppy.id} </div>
-              <div id="pupName">{puppy.name}</div>
-              <img id="puppyImg" src={puppy.imageUrl} alt="image" height={400} width={300}></img>
-              <button id="cuteDetails">Cute Pupper Details</button>
-              <button id="btnRmv">Remove from Puppy Roster</button>
-            </div>
+              <SinglePuppy puppy={puppy} getPuppy={props.getPuppy} />
+            
           );})) : (
         <div>Loading Puppies...</div>
       )}
