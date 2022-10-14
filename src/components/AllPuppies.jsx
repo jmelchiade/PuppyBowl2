@@ -9,7 +9,7 @@ const AllPuppies = (props) => {
       {myPuppies.length ? (
         myPuppies.map((puppy) => {
           return (
-              <SinglePuppy puppy={puppy} />
+              <SinglePuppy puppy={puppy} getPuppy={props.getPuppy} />
             
           );})) : (
         <div>Loading Puppies...</div>
