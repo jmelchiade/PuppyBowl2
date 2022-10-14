@@ -4,6 +4,8 @@ import { Navbar, AllPuppies, SinglePuppy, PuppyDetails } from "./";
 const Main = () => {
   const [puppyData, setPuppyData] = useState([]);
   const [selectedPuppy, setSelectedPuppy] = useState({});
+  const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     async function getPuppyData() {
       const response = await fetch(
@@ -16,14 +18,17 @@ const Main = () => {
     }
     getPuppyData();
   }, []);
+
   function filterPuppyData() {
-    let filteredPuppies = puppyData;
-    //Do the filtering here
-    filteredPuppies = puppyData.filter((puppy) => {
-      return puppy.name === "Jack";
-    });
-    return filteredPuppies;
+    if (!searchTerm) {
+      return puppyData;
+    } else {
+      return puppyData.filter((puppy) => {
+        return puppy.name.toLowerCase() === searchTerm.toLowerCase();
+      });
+    }
   }
+
   async function getPuppy(playerId) {
     try {
       const response = await fetch(
@@ -38,7 +43,7 @@ const Main = () => {
   }
   return (
     <div id="main">
-      <Navbar />
+      <Navbar setSearchTerm={setSearchTerm} />
       {selectedPuppy.id ? (
         <PuppyDetails
           selectedPuppy={selectedPuppy}
