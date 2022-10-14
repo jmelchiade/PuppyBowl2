@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, AllPuppies, SinglePuppy } from "./";
+import { Navbar, AllPuppies, } from "./";
 
 const Main = () => {
   const [puppyData, setPuppyData] = useState([]);
@@ -9,18 +9,19 @@ const Main = () => {
         "https://fsa-puppy-bowl.herokuapp.com/api/2209-FTB-ET-WEB-FT/players"
       );
       const result = await response.json();
+      
       const data = result.data.players;
       setPuppyData(data);
-      console.log(result.data.players);
+      
     }
     getPuppyData();
   }, []);
-  console.log(puppyData, "This is puppy data");
+  
   return (
     <div id="main">
       <Navbar />
       <AllPuppies puppyData={puppyData} />
-      <SinglePuppy/>
+    
     </div>
   );
 };
