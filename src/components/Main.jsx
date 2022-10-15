@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, AllPuppies, SinglePuppy, PuppyDetails } from "./";
+import { Navbar, AllPuppies, PuppyDetails } from "./";
 
 
 
