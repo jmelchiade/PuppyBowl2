@@ -8,7 +8,7 @@ const SinglePuppy = (props) => {
               <span id="pupId">{"#"+ puppy.id}
               <div>{puppy.name}</div></span>
               <img id="puppyImg" src={puppy.imageUrl} alt="image" height={400} width={300}></img>
-              <button id="cuteDetails" onClick={()=> {props.getPuppy(puppy.id)}}>Cute Pupper Details</button>
+              <button id="cuteDetails" onClick={()=> {props.getPuppy(puppy.id)}}>Boop the Snoot</button>
 			{/* <h2>I am a single puppy</h2> */}
               
             </div>

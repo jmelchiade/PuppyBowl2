@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = (props) => {
   return (
     <div id="Navbar">
-      <div><h2>Cute Puppy Roster</h2></div>
+      <div><h2>Cute Puppy Roster!</h2></div>
       <div><form
         onSubmit={(e) => {
           e.preventDefault();
@@ -14,7 +14,7 @@ const Navbar = (props) => {
           Name:
           <input type="text" name="name" />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit">Find Puppy!</button>
       </form></div>
     </div>
   );

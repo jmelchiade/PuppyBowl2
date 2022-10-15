@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navbar, AllPuppies, SinglePuppy, PuppyDetails } from "./";
+import image from "./background.jpeg";
+
 
 const Main = () => {
   const [puppyData, setPuppyData] = useState([]);
@@ -51,8 +53,10 @@ const Main = () => {
         />
       ) : (
         <AllPuppies puppyData={filterPuppyData()} getPuppy={getPuppy} />
+        
       )}
     </div>
+   
   );
 };
 

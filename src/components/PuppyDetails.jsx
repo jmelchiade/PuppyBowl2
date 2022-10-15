@@ -15,8 +15,8 @@ const PuppyDetails = (props) => {
         height={400}
         width={300}
       ></img>
-      <div> breed: {puppy.breed}</div>
-      <div> position: {puppy.status}</div>
+      <div id="breed"> Breed: {puppy.breed}</div>
+      <div id="status"> Status: {puppy.status}</div>
       <h2>Pick Me!</h2>
       <button
         id="goBackBtn"
